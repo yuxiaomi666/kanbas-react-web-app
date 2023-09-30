@@ -1,0 +1,22 @@
+.list-group {
+  border-radius: 0;
+}
+
+.list-group-item {
+  /* position: relative;
+  display: block;
+  padding: var(--bs-list-group-item-padding-y)
+    var(--bs-list-group-item-padding-x); */
+  color: red;
+  text-decoration: none;
+  background-color: var(--bs-list-group-bg);
+  border: var(--bs-list-group-border-width) solid
+    var(--bs-list-group-border-color);
+}
+
+.list-group-item.active {
+  color: black;
+  background-color: white;
+  border-color: white;
+  border-left: 2px solid black;
+}
