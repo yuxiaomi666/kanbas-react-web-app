@@ -61,40 +61,58 @@
           </li>
         </ul>
       </div>
-
-      <div class="d-none d-md-block">
-        <ul class="wd-account-navigation">
-          <li><a href="#">Notifications</a></li>
-          <li class="wd-active">
-            <a href="/Kanbas/Account/Profile/screen.html">Profile</a>
-          </li>
-          <li><a href="#">Files</a></li>
-          <li><a href="#">Settings</a></li>
-          <li><a href="#">ePortofolios</a></li>
-          <li><a href="#">Shared Content</a></li>
-          <li><a href="#">The Hub</a></li>
-          <li><a href="#">Qwickly Course Tools</a></li>
-          <li><a href="#">Global Announcements</a></li>
-        </ul>
-      </div>
-
-      <div class="container">
-        <div class="row">
-          <div class="col-8">
-            <!-- Yaxin Yu's Profile
-          <hr /> -->
-            <div style="text-align: right"></div>
-            <h2>Yaxin Yu</h2>
-            <h3>Contact</h3>
-            No registered service.
-            <h3>Biography</h3>
-            Master student in Computer Science.
-            <h3>Links</h3>
-            <a href="#">some link</a>
+      <div class="wd-flex-grow-1 wd-content-container">
+        <div class="wd-account-profile-heading">
+          <i class="fa fa-bars" style="padding-left: 30px"></i>
+          <span style="padding-left: 40px; color: black"
+            >Yaxin Yu's Profile</span
+          >
+        </div>
+        <hr />
+        <div class="d-flex">
+          <div class="d-none d-md-block">
+            <ul class="wd-account-navigation">
+              <li><a href="#">Notifications</a></li>
+              <li class="wd-active">
+                <a href="/Kanbas/Account/Profile/screen.html">Profile</a>
+              </li>
+              <li><a href="#">Files</a></li>
+              <li><a href="#">Settings</a></li>
+              <li><a href="#">ePortofolios</a></li>
+              <li><a href="#">Shared Content</a></li>
+              <li><a href="#">The Hub</a></li>
+              <li><a href="#">Qwickly Course Tools</a></li>
+              <li><a href="#">Global Announcements</a></li>
+            </ul>
           </div>
-          <div class="col-4">
+          <div class="wd-flex-grow-1 wd-account-profile">
+            <div>
+              <i class="fa fa-user-circle-o" style="font-size: 700%; color:grey"></i>
+            </div>
+
+            <div class="wd-account-profile"><h3>Yaxin Yu</h3></div>
+
+            <div class="wd-account-profile">
+              <h4>Contact</h4>
+              No registered service, you can add some on the <span style="color: red;">settings</span> page.
+            </div>
+
+            <div class="wd-account-profile">
+              <h4>Biography</h4>
+              Faculty, software engineer, AI, Space, and renewable enthusiastic.
+            </div>
+
+            <div class="wd-account-profile">
+              <h4>Links</h4>
+              <a href="https://www.youtube.com/watch?v=9XsRrm-VKj4" class="wd-heading-red"><i class="fa fa-link" style="color: black;"></i>Youtube<i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <div class="wd-profile-right-colomn">
             <form action="/Kanbas/Account/Profile/EditProfile/screen.html">
-              <button>Edit Profile</button>
+              <button class="btn btn-secondary ">
+                <i class="fa fa-pencil" style="padding-right: 10px"></i>Edit
+                Profile
+              </button>
             </form>
           </div>
         </div>
@@ -102,9 +120,3 @@
     </div>
   </body>
 </html>
-
-<table border="1" width="100%">
-  <tr>
-    <td valign="top"></td>
-  </tr>
-</table>

@@ -180,6 +180,8 @@
 .wd-flex-row-container {
   display: flex;
   flex-direction: row;
+  height: 100%;
+
 }
 .wd-flex-grow-1 {
   flex-grow: 1;
@@ -231,7 +233,6 @@
   padding: 0px;
   width: 190px;
   margin: 0px;
-  margin-left: 20px;
 }
 
 .wd-account-navigation a {
@@ -259,9 +260,30 @@
   margin-bottom: 5px;
 }
 
-.wd-account-profile {
+/* .wd-account-profile {
   display: flex;
   flex-direction: row;
+} */
+
+.wd-account-profile-heading {
+  color:red;
+  padding-top: 20px;
+  font-size: larger;
+}
+
+.wd-account-profile {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 280px;
+}
+
+.wd-account-profile i {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.wd-profile-right-colomn {
+margin-right:60px;
 }
 
 .wd-course-navigation {
@@ -270,7 +292,6 @@
   padding: 0px;
   width: 120px;
   margin: 0px;
-  margin-left: 20px;
 }
 
 .wd-course-navigation a {
@@ -283,7 +304,7 @@
   margin-bottom: 10px;
   margin-top: 10px;
   font-size: 0.8em;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .wd-course-navigation li.wd-active {
@@ -291,16 +312,56 @@
 }
 
 .wd-course-navigation li.wd-active a {
-  border-left: 1px solid black;
   color: black;
 }
 
-.wd-course-heading-red {
+.list-group {
+  padding-left: 20px;
+}
+
+/* for headinds  */
+.wd-heading-red {
   color: red;
+  text-decoration: none;
 }
 
-.wd-course-heading-black {
+.wd-heading-black {
   color: black;
+  text-decoration: none;
+}
+
+.wd-heading-space {
+  margin-left: 30px;
+  margin-top: 30px;
+  font-size: larger;
+}
+
+/* for genetal spacing */
+.wd-general-table-spacing {
+  font-size: medium;
+}
+
+.wd-general-table-spacing td {
+  margin-top: 50px;
+  padding-right: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.wd-general-table-spacing label {
+  margin-top: 10px;
+  padding-right: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+}
+
+/* genenral */
+.wd-inline-check-box {
+  min-height: 1.5rem;
+  padding-left: 3.5em;
+  margin-bottom: 0.125rem;
+  margin-right: 1em;
 }
 
 .wd-dashboard-grid .row {
@@ -308,24 +369,106 @@
   margin-left: 20px;
 }
 
-
 .wd-indented-row {
-margin-left: 30px;
+  margin-left: 30px;
   padding-left: 20px;
 }
 
 .wd-dashboard-grid .col {
   width: 260px;
-  height: 270px
+  height: 270px;
 }
 
 .wd-dashboard {
   width: 300px;
 }
 
-.wd-dashboard-grid a{
+.wd-dashboard-grid a {
   text-decoration: none;
   font-size: small;
   color: black;
 }
+
+/* courses-settings-navbar(stick to top) */
+
+.col .nav {
+  --bs-nav-link-color: red;
+}
+
+/* for grades */
+.wd-breadcrumb-color-red {
+  color: red;
+}
+
+.wd-grade-top-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+.wd-grade-top-button-container {
+  display: inline-block;
+  float: right;
+}
+
+.wd-grade-search-container {
+  display: inline-block;
+  width: 49%;
+}
+
+.wd-grade-search-container-margin {
+  margin-left: 1%;
+}
+
+.wd-grade-filter {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.wd-grade-search-container input {
+  width: 99%;
+}
+
+.wd-content-container {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.wd-breadcrumb {
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.wd-breadcrumb a {
+  text-decoration: none;
+}
+
+/* for course navigation and follow on */
+/* effect is strange, not decided whether to use */
+.wd-stick-to-top { 
+position: sticky;
+  top: 0; 
+}
+
+.wd-course-setting-navigation {
+  font-size: medium;
+}
+
+.wd-no-right-border {
+  border-right: none;
+}
+
+.wd-no-right-border span{
+  padding-left: 20px;
+  font-size: medium;
+  font-style: italic;
+}
+
+.wd-float-end-bar {
+  border-left: none;
+
+}
+
+
+
 

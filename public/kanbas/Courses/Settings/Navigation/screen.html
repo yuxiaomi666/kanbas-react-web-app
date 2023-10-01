@@ -1,100 +1,192 @@
-<table border="1" width="100%">
-  <tr>
-    <td valign="top">
-      <ul>
-        <li><a href="/Kanbas/Account/AccountNavigation">Account</a></li>
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="/Kanbas/Courses/CourseNavigation">Courses</a></li>
-        <li><a href="#">Calendar</a></li>
-        <li><a href="#">Inbox</a></li>
-        <li><a href="#">History</a></li>
-        <li><a href="#">Studio</a></li>
-        <li><a href="#">Commons</a></li>
-        <li><a href="#">Help</a></li>
-      </ul>
-    </td>
-    <td valign="top">
-      <ul>
-        <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
-        <li><a href="/Kanbas/Courses/Modules/screen.html">Modules</a></li>
-        <li><a href="#">Piazza</a></li>
-        <li><a href="#">Zoom Meetings</a></li>
-        <li>
-          <a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
-        </li>
-        <li><a href="#">Quizzes</a></li>
-        <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
-        <li><a href="#">People</a></li>
-        <li><a href="#">Panopto Video</a></li>
-        <li><a href="#">Discussions</a></li>
-        <li><a href="#">Announcements</a></li>
-        <li><a href="#">Pages</a></li>
-        <li><a href="#">Files</a></li>
-        <li><a href="#">Rubrics</a></li>
-        <li><a href="#">Outcomes</a></li>
-        <li><a href="#">Collaborations</a></li>
-        <li><a href="#">Syllabus</a></li>
-        <li><a href="/Kanbas/Courses/Settings/screen.html">Settings</a></li>
-      </ul>
-    </td>
-    <td valign="top">
-      <table>
-        <tr>
-          <td>
-            <a href="http://localhost:3000/Kanbas/Courses/Settings/screen.html"
-              >Course Details</a
-            >
-          </td>
-          <td>Sections</td>
-          <td>
-            <a
-              href="http://localhost:3000/Kanbas/Courses/Settings/Navigation/screen.html"
-              >Navigation</a
-            >
-          </td>
-          <td>Apps</td>
-          <td>Feature Option</td>
-          <td>Integration</td>
+<html>
+<head>
+  <link href="/kanbas/index.css" rel="stylesheet" />
+  <link href="/kanbas/style.css" rel="stylesheet" />
+  <link href="/libs/bootstrap/bootstrap.min.css" rel="stylesheet" />
+  <link href="/libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+</head>
+
+<body>
+<div class="wd-flex-row-container">
+  <div class="d-none d-md-block wd-bg-color-black">
+    <ul class="wd-kanbas-navigation">
+      <li>
+        <img src="/kanbas/img/neu-logo.png" style="width: 45px;"></img>
+      </li>
+      <li>
+        <a href="/kanbas/Account/AccountNavigation"
+        ><i class="fa fa-user" aria-hidden="true"></i> Account</a
+        >
+      </li>
+      <li >
+        <a href="/kanbas/Dashboard/screen.html">
+          <i class="fa fa-tachometer" aria-hidden="true"></i>
+          Dashboard</a
+        >
+      </li>
+      <li class="wd-active">
+        <a href="/kanbas/Courses/CourseNavigation"
+        ><i class="fa fa-book" aria-hidden="true"></i>Courses</a
+        >
+      </li>
+      <li>
+        <a href="#"
+        ><i class="fa fa-calendar" aria-hidden="true"></i>Calendar</a
+        >
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-inbox" aria-hidden="true"></i>Inbox</a>
+      </li>
+      <li>
+        <a href="#"
+        ><i class="fa fa-clock-o" aria-hidden="true"></i>History</a
+        >
+      </li>
+      <li>
+        <a href="#"
+        ><i class="fa fa-youtube-play" aria-hidden="true"></i>Studio</a
+        >
+      </li>
+      <li>
+        <a href="#"
+        ><i class="fa fa-arrow-circle-right" aria-hidden="true"></i
+        >Commons</a
+        >
+      </li>
+      <li>
+        <a href="#"
+        ><i class="fa fa-question-circle" aria-hidden="true"></i>Help</a
+        >
+      </li>
+    </ul>
+  </div>
+
+  <div class="wd-flex-grow-1 wd-content-container">
+    <div class="wd-breadcrumb">
+      <nav style="--bs-breadcrumb-divider: '>'; color: red;" aria-label="breadcrumb" style>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href=" " class="wd-heading-red">CS610.12631.20241</a ></li>
+          <li class="breadcrumb-item active wd-heading-black" aria-current="page">Setting</li>
+        </ol>
+      </nav>
+    </div>
+    <hr/>
+    <div class="wd-grade-top-container wd-flex-grow-1 d-flex">
+      <span style="font-size: smaller; padding-top: 5px;"> 202310_2 Fall semester</span>
+      <div class="col wd-flex-grow-1">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost:3000/Kanbas/Courses/Settings/screen.html">Course Details</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sections</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="http://localhost:3000/Kanbas/Courses/Settings/Navigation/screen.html">Navigation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Apps</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Feature Option</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Integration</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="d-flex">
+        <div>
+          <ul class="wd-course-navigation">
+            <li >
+              <a href="/kanbas/Courses/Home/screen.html"> Home</a>
+            </li>
+            <li><a href="/kanbas/Courses/Modules/screen.html">Modules</a></li>
+            <li><a href="#">Piazza</a></li>
+            <li><a href="#">Zoom Meetings</a></li>
+            <li>
+              <a href="/kanbas/Courses/Assignments/screen.html"
+              >Assignments</a
+              >
+            </li>
+            <li><a href="#">Quizzes</a></li>
+            <li><a href="/kanbas/Courses/Grades/screen.html">Grades</a></li>
+            <li><a href="#">People</a></li>
+            <li><a href="#">Panopto Video</a></li>
+            <li><a href="#">Discussions</a></li>
+            <li><a href="#">Announcements</a></li>
+            <li><a href="#">Pages</a></li>
+            <li><a href="#">Files</a></li>
+            <li><a href="#">Rubrics</a></li>
+            <li><a href="#">Outcomes</a></li>
+            <li><a href="#">Collaborations</a></li>
+            <li><a href="#">Syllabus</a></li>
+            <li class="wd-active">
+              <a href="/kanbas/Courses/Settings/screen.html">Settings</a>
+            </li>
+          </ul>
+        </div>
+
+
+
+
+
+          <div class="wd-heading-space">
+            <div class="wd-course-setting-navigation" >Drag and drop
+              items to reorder
+              them in the course navigation</div>
+            <div style="width: 480px;">
+              <table class="table table-bordered">
+              <tr>
+          <td class="wd-no-right-border">Home</td>
+          <td class="float-end wd-float-end-bar"></td>
         </tr>
-      </table>
-      <hr />
-      <b>Drag and drop items to reorder them in the course navigation.</b>
-      <table border="1" width="100%">
         <tr>
-          <td>Home</td>
+          <td class="wd-no-right-border">Modules</td>
+          <td class="float-end wd-float-end-bar"><i class="fa fa-ellipsis-v" ></i></td>
         </tr>
         <tr>
-          <td>Modules</td>
+          <td class="wd-no-right-border">Piazza</td>
+          <td class="float-end wd-float-end-bar"><i class="fa fa-ellipsis-v" ></i></td>
         </tr>
         <tr>
-          <td>Piazza</td>
+          <td class="wd-no-right-border">Zoom Meetings</td>
+          <td class="float-end wd-float-end-bar"><i class="fa fa-ellipsis-v" ></i></td>
         </tr>
         <tr>
-          <td>Zoom Meetings</td>
+          <td class="wd-no-right-border">Assignments</td>
+          <td class="float-end wd-float-end-bar"><i class="fa fa-ellipsis-v" ></i></td>
         </tr>
         <tr>
-          <td>Assignments</td>
+          <td class="wd-no-right-border">Quizzes</td>
+          <td class="float-end wd-float-end-bar"><i class="fa fa-ellipsis-v" ></i></td>
         </tr>
         <tr>
-          <td>Quizzes</td>
+          <td class="wd-no-right-border">Grades</td>
+          <td class="float-end wd-float-end-bar"><i class="fa fa-ellipsis-v" ></i></td>
         </tr>
         <tr>
-          <td>Grades</td>
+          <td class="wd-no-right-border">People</td>
+          <td class="float-end wd-float-end-bar"><i class="fa fa-ellipsis-v" ></i></td>
         </tr>
         <tr>
-          <td>People</td>
+          <td class="wd-no-right-border">Panopto Video</td>
+          <td class="float-end wd-float-end-bar"><i class="fa fa-ellipsis-v" ></i></td>
         </tr>
-        <tr>
-          <td>Panopto Video</td>
-        </tr>
-      </table>
-      <br />
-      <b>Drag items here to hide them from students</b><br />
-      Diabling most pages will cause students who visit those pages to be
-      redirected to the course home page.
-      <table border="1" width="100%">
-        <tr>
-          <td>
+        </table>
+            </div >
+
+        <div class="wd-course-setting-navigation">Drag items here to hide them from
+          students<br>
+      <span style="font-size: small">Diabling most pages will cause students who visit those pages
+        to be
+      redirected to the course home page.</span></div>
+            <div style="width: 480px;">
+            <table class="table table-bordered">
+               <tr>
+          <td class="wd-no-right-border">
             <div>Chat</div>
             <span
               ><small>
@@ -102,9 +194,10 @@
               ></span
             >
           </td>
+                 <td class="float-end wd-float-end-bar"><i class="fa fa-ellipsis-v" ></i></td>
         </tr>
         <tr>
-          <td>
+          <td class="wd-no-right-border">
             <div>SCORM</div>
             <span
               ><small>
@@ -112,9 +205,10 @@
               ></span
             >
           </td>
+          <td class="float-end wd-float-end-bar"><i class="fa fa-ellipsis-v" ></i></td>
         </tr>
         <tr>
-          <td>
+          <td class="wd-no-right-border">
             <div>Attendance</div>
             <span
               ><small
@@ -122,9 +216,10 @@
               ></span
             >
           </td>
+          <td class="float-end wd-float-end-bar"><i class="fa fa-ellipsis-v" ></i></td>
         </tr>
         <tr>
-          <td>
+          <td class="wd-no-right-border">
             <div>Barnes and Noble Bookstore</div>
             <span
               ><small
@@ -132,9 +227,10 @@
               ></span
             >
           </td>
+          <td class="float-end wd-float-end-bar"><i class="fa fa-ellipsis-v" ></i></td>
         </tr>
         <tr>
-          <td>
+          <td class="wd-no-right-border">
             <div>Digication</div>
             <span
               ><small
@@ -142,9 +238,10 @@
               ></span
             >
           </td>
+          <td class="float-end wd-float-end-bar"><i class="fa fa-ellipsis-v" ></i></td>
         </tr>
         <tr>
-          <td>
+          <td class="wd-no-right-border">
             <div>Top Hat</div>
             <span
               ><small
@@ -152,9 +249,10 @@
               ></span
             >
           </td>
+          <td class="float-end wd-float-end-bar"><i class="fa fa-ellipsis-v" ></i></td>
         </tr>
         <tr>
-          <td>
+          <td class="wd-no-right-border">
             <div>Syllabus</div>
             <span
               ><small
@@ -162,9 +260,10 @@
               ></span
             >
           </td>
+          <td class="float-end wd-float-end-bar"><i class="fa fa-ellipsis-v" ></i></td>
         </tr>
         <tr>
-          <td>
+          <td class="wd-no-right-border">
             <div>Perusall</div>
             <span
               ><small
@@ -172,9 +271,10 @@
               ></span
             >
           </td>
+          <td class="float-end wd-float-end-bar"><i class="fa fa-ellipsis-v" ></i></td>
         </tr>
         <tr>
-          <td>
+          <td class="wd-no-right-border">
             <div>Microsoft Teams Meetings</div>
             <span
               ><small
@@ -182,9 +282,10 @@
               ></span
             >
           </td>
+          <td class="float-end wd-float-end-bar"><i class="fa fa-ellipsis-v" ></i></td>
         </tr>
         <tr>
-          <td>
+          <td class="wd-no-right-border">
             <div>FACT Reposrting and Photo Roster</div>
             <span
               ><small
@@ -192,9 +293,10 @@
               ></span
             >
           </td>
+          <td class="float-end wd-float-end-bar"><i class="fa fa-ellipsis-v" ></i></td>
         </tr>
         <tr>
-          <td>
+          <td class="wd-no-right-border">
             <div>Progress Reposrts(Navigate)</div>
             <span
               ><small
@@ -202,9 +304,10 @@
               ></span
             >
           </td>
+          <td class="float-end wd-float-end-bar"><i class="fa fa-ellipsis-v" ></i></td>
         </tr>
         <tr>
-          <td>
+          <td class="wd-no-right-border">
             <div>Microsoft Teams for Canvas</div>
             <span
               ><small
@@ -212,9 +315,10 @@
               ></span
             >
           </td>
+          <td class="float-end wd-float-end-bar"><i class="fa fa-ellipsis-v" ></i></td>
         </tr>
         <tr>
-          <td>
+          <td class="wd-no-right-border">
             <div>VHL Central</div>
             <span
               ><small
@@ -222,9 +326,10 @@
               ></span
             >
           </td>
+          <td class="float-end wd-float-end-bar"><i class="fa fa-ellipsis-v" ></i></td>
         </tr>
         <tr>
-          <td>
+          <td class="wd-no-right-border">
             <div>Gradescope 1.3</div>
             <span
               ><small
@@ -232,9 +337,10 @@
               ></span
             >
           </td>
+          <td class="float-end wd-float-end-bar"><i class="fa fa-ellipsis-v" ></i></td>
         </tr>
         <tr>
-          <td>
+          <td class="wd-no-right-border">
             <div>Credentials</div>
             <span
               ><small
@@ -242,9 +348,10 @@
               ></span
             >
           </td>
+          <td class="float-end wd-float-end-bar"><i class="fa fa-ellipsis-v" ></i></td>
         </tr>
         <tr>
-          <td>
+          <td class="wd-no-right-border">
             <div>iClicker</div>
             <span
               ><small
@@ -252,9 +359,27 @@
               ></span
             >
           </td>
+          <td class="float-end wd-float-end-bar"><i class="fa fa-ellipsis-v" ></i></td>
         </tr>
       </table>
-      <button>Save</button>
-    </td>
-  </tr>
-</table>
+            </div>   
+           
+
+
+
+            <button type="button" class="btn btn-danger">Save</button>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+
+
+
