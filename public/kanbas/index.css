@@ -1,31 +1,43 @@
 .wd-fg-color-black {
   color: black;
 }
+
 .wd-fg-color-white {
   color: white;
 }
+
 .wd-fg-color-blue {
   color: #7070ff;
 }
+
 .wd-fg-color-red {
   color: #ff7070;
 }
+
 .wd-fg-color-green {
-  color: green;
+  color: #008000;
+}
+
+.wd-bg-color-light-grey {
+  background-color: #ecececff !important;
 }
 
 .wd-bg-color-yellow {
   background-color: #ffff07;
 }
+
 .wd-bg-color-blue {
   background-color: #7070ff;
 }
+
 .wd-bg-color-red {
   background-color: #ff7070;
 }
+
 .wd-bg-color-green {
   background-color: green;
 }
+
 .wd-bg-color-black {
   background-color: black;
 }
@@ -33,21 +45,27 @@
 .wd-border-fat {
   border-width: 10px 30px 10px 60px;
 }
+
 .wd-border-thin {
   border-width: 4px;
 }
+
 .wd-border-solid {
   border-style: solid;
 }
+
 .wd-border-dashed {
   border-style: dashed;
 }
+
 .wd-border-yellow {
   border-color: #ffff07;
 }
+
 .wd-border-red {
   border-color: #ff7070;
 }
+
 .wd-border-blue {
   border-color: #7070ff;
 }
@@ -56,10 +74,12 @@
   padding-top: 50px;
   padding-left: 50px;
 }
+
 .wd-padded-bottom-right {
   padding-bottom: 50px;
   padding-right: 50px;
 }
+
 .wd-padding-fat {
   padding: 50px;
 }
@@ -67,10 +87,12 @@
 .wd-margin-bottom {
   margin-bottom: 50px;
 }
+
 .wd-margin-right-left {
   margin-left: 50px;
   margin-right: 50px;
 }
+
 .wd-margin-all-around {
   margin: 30px;
 }
@@ -79,13 +101,16 @@
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
 }
+
 .wd-rounded-corners-bottom {
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
 }
+
 .wd-rounded-corners-all-around {
   border-radius: 50px;
 }
+
 .wd-rounded-corners-inline {
   border-radius: 30px 0px 20px 50px;
 }
@@ -94,84 +119,104 @@
   width: 75px;
   height: 100px;
 }
+
 .wd-dimension-landscape {
   width: 100px;
   height: 75px;
 }
+
 .wd-dimension-square {
   width: 75px;
   height: 75px;
 }
+
 .wd-pos-relative-nudge-up-right {
   position: relative;
   bottom: 30px;
   left: 30px;
 }
+
 .wd-pos-relative-nudge-down-right {
   position: relative;
   top: 20px;
   left: 20px;
 }
+
 .wd-pos-relative {
   position: relative;
 }
+
 .wd-pos-absolute-10-10 {
   position: absolute;
   top: 10px;
   left: 10px;
 }
+
 .wd-pos-absolute-50-50 {
   position: absolute;
   top: 50px;
   left: 50px;
 }
+
 .wd-pos-absolute-120-20 {
   position: absolute;
   top: 20px;
   left: 120px;
 }
+
 .wd-pos-fixed {
   position: fixed;
   right: 0px;
   bottom: 50%;
 }
+
 .wd-zindex-bring-to-front {
   z-index: 10;
 }
+
 .wd-float-left {
   float: left;
   height: 100px;
 }
+
 .wd-float-right {
   float: right;
   height: 100px;
 }
+
 .wd-float-done {
   clear: both;
 }
+
 .wd-grid-row {
   clear: both;
 }
+
 .wd-grid-col-half-page {
   width: 50%;
   float: left;
 }
+
 .wd-grid-col-third-page {
   width: 33%;
   float: left;
 }
+
 .wd-grid-col-two-thirds-page {
   width: 67%;
   float: left;
 }
+
 .wd-grid-col-left-sidebar {
   width: 20%;
   float: left;
 }
+
 .wd-grid-col-main-content {
   width: 60%;
   float: left;
 }
+
 .wd-grid-col-right-sidebar {
   width: 20%;
   float: left;
@@ -181,11 +226,12 @@
   display: flex;
   flex-direction: row;
   height: 100%;
-
 }
+
 .wd-flex-grow-1 {
   flex-grow: 1;
 }
+
 .wd-width-75px {
   width: 75px;
 }
@@ -233,6 +279,7 @@
   padding: 0px;
   width: 190px;
   margin: 0px;
+  margin-left: 20px;
 }
 
 .wd-account-navigation a {
@@ -260,66 +307,187 @@
   margin-bottom: 5px;
 }
 
-/* .wd-account-profile {
-  display: flex;
-  flex-direction: row;
-} */
-
-.wd-account-profile-heading {
-  color:red;
-  padding-top: 20px;
-  font-size: larger;
-}
-
 .wd-account-profile {
-  margin-top: 20px;
-  margin-bottom: 30px;
-  width: 280px;
+  margin-left: 30px;
 }
 
-.wd-account-profile i {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.wd-profile-right-colomn {
-margin-right:60px;
-}
-
-.wd-course-navigation {
+.wd-mid-navigation {
   background-color: white;
   list-style: none;
   padding: 0px;
-  width: 120px;
+  width: 190px;
   margin: 0px;
 }
 
-.wd-course-navigation a {
+.wd-mid-navigation a {
   color: red;
   text-decoration: none;
 }
 
-.wd-course-navigation li {
+.wd-mid-navigation li {
+  padding-bottom: 7px;
+  padding-top: 7px;
   padding-left: 10px;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  font-size: 0.8em;
-  /* text-align: center; */
+  font-size: 1em;
 }
 
-.wd-course-navigation li.wd-active {
+.wd-mid-navigation li.wd-active {
   border-left: 1px solid black;
 }
 
-.wd-course-navigation li.wd-active a {
+.wd-mid-navigation li.wd-active a {
   color: black;
 }
 
-.list-group {
+.wd-course-heading-red {
+  color: red;
+}
+
+.wd-course-heading-black {
+  color: black;
+}
+
+.wd-indented-row {
+  margin-left: 30px;
   padding-left: 20px;
 }
 
-/* for headinds  */
+wd-dashboard-grid {
+  margin-bottom: -40px;
+}
+
+.wd-dashboard-grid .col {
+  width: 260px;
+  height: 270px;
+}
+
+.wd-dashboard {
+  width: 300px;
+}
+
+.wd-dashboard-grid a {
+  text-decoration: none;
+  font-size: small;
+  color: black;
+}
+
+.wd-breadcrumb-color-red {
+  color: red;
+}
+
+.wd-grade-top-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-height: 30px;
+}
+
+.wd-grade-top-button-container {
+  display: inline-block;
+  float: right;
+}
+
+.wd-grade-search-container {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.wd-grade-filter {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.wd-grade-search-container input {
+  width: 99%;
+}
+
+.wd-content-container {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.wd-breadcrumb {
+  display: flex;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.wd-breadcrumb-icon {
+  color: red;
+  margin-top: 12px;
+  margin-right: 15px;
+}
+
+.wd-breadcrumb a {
+  text-decoration: none;
+}
+
+.wd-semester-text {
+  margin-left: 10px;
+  font-size: 0.9em;
+  font-style: italic;
+  color: grey;
+}
+
+.wd-grade-table-input {
+  width: 50px;
+}
+
+.wd-nav-account-white {
+  color: grey !important;
+}
+
+.wd-account-profile-icon {
+  padding: 30px;
+}
+
+.wd-youtube-text {
+  color: red;
+  text-decoration: none;
+}
+
+.wd-account-profile-pronouns {
+  width: 40%;
+}
+
+.wd-account-profile-input {
+  width: 60%;
+}
+
+.wd-account-profile-link-ele {
+  width: 90% !important;
+  margin-right: 10px !important;
+  display: inline-block !important;
+}
+
+.wd-dashboard-card {
+  min-width: 260px;
+}
+
+.wd-dashboard-card-item {
+  flex-basis: calc(25% - 36px) !important;
+  margin-left: 18px;
+  margin-right: 18px;
+  margin-bottom: 40px;
+  height: 20% !important;
+  min-width: 260px !important;
+}
+
+.wd-clear-both {
+  clear: both;
+}
+
+.wd-assignment-progress {
+  border: grey;
+  border-radius: 16px;
+  border: 1px solid;
+}
+
+.wd-submission-container {
+  margin-left: 10px;
+  border-radius: 5px;
+  border: 1px solid;
+}
+
 .wd-heading-red {
   color: red;
   text-decoration: none;
@@ -330,10 +498,8 @@ margin-right:60px;
   text-decoration: none;
 }
 
-.wd-heading-space {
-  margin-left: 30px;
-  margin-top: 30px;
-  font-size: larger;
+.nav-item .nav-link {
+  --bs-nav-link-color: red;
 }
 
 /* for genetal spacing */
@@ -353,122 +519,81 @@ margin-right:60px;
   padding-right: 20px;
   padding-top: 8px;
   padding-bottom: 8px;
-
 }
 
-/* genenral */
-.wd-inline-check-box {
-  min-height: 1.5rem;
-  padding-left: 3.5em;
-  margin-bottom: 0.125rem;
-  margin-right: 1em;
+.wd-general-table-spacing {
+  font-size: medium;
 }
 
-.wd-dashboard-grid .row {
-  margin-top: 40px;
-  margin-left: 20px;
+.wd-general-table-spacing td {
+  margin-top: 50px;
+  padding-right: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
-.wd-indented-row {
-  margin-left: 30px;
-  padding-left: 20px;
-}
-
-.wd-dashboard-grid .col {
-  width: 260px;
-  height: 270px;
-}
-
-.wd-dashboard {
-  width: 300px;
-}
-
-.wd-dashboard-grid a {
-  text-decoration: none;
-  font-size: small;
-  color: black;
-}
-
-/* courses-settings-navbar(stick to top) */
-
-.col .nav {
-  --bs-nav-link-color: red;
-}
-
-/* for grades */
-.wd-breadcrumb-color-red {
-  color: red;
-}
-
-.wd-grade-top-container {
+.wd-general-table-spacing label {
   margin-top: 10px;
-  margin-bottom: 10px;
-
+  padding-right: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
-.wd-grade-top-button-container {
-  display: inline-block;
-  float: right;
+.fixed-div {
+  position: fixed;
+  top: 0; /* Adjust this value to set the vertical position */
+  left: 0; /* Adjust this value to set the horizontal position */
+  width: 200px; /* Adjust the width as needed */
+  background-color: #fff; /* Background color for the fixed div */
+  border: 1px solid #ccc; /* Border style */
+  padding: 10px; /* Padding as needed */
+  z-index: 100; /* Adjust the z-index to control the stacking order */
 }
 
-.wd-grade-search-container {
-  display: inline-block;
-  width: 49%;
-}
-
-.wd-grade-search-container-margin {
-  margin-left: 1%;
-}
-
-.wd-grade-filter {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.wd-grade-search-container input {
-  width: 99%;
-}
-
-.wd-content-container {
+.wd-course-right-bar {
+  background-color: white;
+  list-style: none;
+  padding: 0px;
+  width: 250px;
   margin-left: 20px;
   margin-right: 20px;
 }
 
-.wd-breadcrumb {
-  margin-left: 20px;
-  margin-top: 15px;
+.wd-course-right-bar hr{
+  margin: 5px;
 }
 
-.wd-breadcrumb a {
-  text-decoration: none;
+.wd-course-right-bar h6{
+  margin-top: 20px;
 }
 
-/* for course navigation and follow on */
-/* effect is strange, not decided whether to use */
-.wd-stick-to-top { 
-position: sticky;
-  top: 0; 
+.wd-course-status-buttons button {
+  display: block;
+  padding: 0px;
+  margin: 8px;
+  margin-left: 0px;
+  width: 230px;
+  text-align: left;
 }
 
-.wd-course-setting-navigation {
-  font-size: medium;
+.wd-course-home-top-bar {
+    background-color: black;
+    padding:20px;
+    margin-bottom: 10px;
 }
 
-.wd-no-right-border {
-  border-right: none;
+.wd-course-home-top-bar i{
+    color: red;
 }
 
-.wd-no-right-border span{
-  padding-left: 20px;
-  font-size: medium;
-  font-style: italic;
+.wd-kanbas-navigation-page {
+  list-style: none;
+  padding: 20px;
+  margin: 0px;
 }
 
-.wd-float-end-bar {
-  border-left: none;
-
+.wd-kanbas-navigation-page a {
+text-decoration: none;
+  color:red;
+  padding-right: 30px;
 }
-
-
-
-

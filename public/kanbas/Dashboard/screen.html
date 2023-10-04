@@ -1,65 +1,74 @@
 <html>
   <head>
-    <link href="/kanbas/index.css" rel="stylesheet" />
-    <link href="/kanbas/style.css" rel="stylesheet" />
+    <link href="/Kanbas/index.css" rel="stylesheet" />
+    <link href="/Kanbas/style.css" rel="stylesheet" />
     <link href="/libs/bootstrap/bootstrap.min.css" rel="stylesheet" />
-    <link href="/libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"/>
   </head>
 
   <body>
-    <div class="wd-flex-row-container">
-      <div class="d-none d-md-block wd-bg-color-black">
-        <ul class="wd-kanbas-navigation">
-          <li>
-            <a href="/Kanbas/Account/AccountNavigation"
-              ><i class="fa fa-user" aria-hidden="true"></i> Account</a
-            >
-          </li>
-          <li class="wd-active">
-            <a href="/Kanbas/Dashboard/screen.html">
-              <i class="fa fa-tachometer" aria-hidden="true"></i>
-              Dashboard</a
-            >
-          </li>
-          <li>
-            <a href="/Kanbas/Courses/CourseNavigation"
-              ><i class="fa fa-book" aria-hidden="true"></i>Courses</a
-            >
-          </li>
-          <li>
-            <a href="#"
-              ><i class="fa fa-calendar" aria-hidden="true"></i>Calendar</a
-            >
-          </li>
-          <li>
-            <a href="#"><i class="fa fa-inbox" aria-hidden="true"></i>Inbox</a>
-          </li>
-          <li>
-            <a href="#"
-              ><i class="fa fa-clock-o" aria-hidden="true"></i>History</a
-            >
-          </li>
-          <li>
-            <a href="#"
-              ><i class="fa fa-youtube-play" aria-hidden="true"></i>Studio</a
-            >
-          </li>
-          <li>
-            <a href="#"
-              ><i class="fa fa-arrow-circle-right" aria-hidden="true"></i
-              >Commons</a
-            >
-          </li>
-          <li>
-            <a href="#"
-              ><i class="fa fa-question-circle" aria-hidden="true"></i>Help</a
-            >
-          </li>
-        </ul>
-      </div>
+    <div class="wd-flex-row-container d-flex flex-row">
+  <div class="d-none d-md-block wd-bg-color-black">
+    <ul class="wd-kanbas-navigation">
+      <li>
+        <img src="/Kanbas/img/neu-logo.png" style="width: 45px;"></img>
+      </li>
+      <li>
+        <a href="/Kanbas/Account/Profile/screen.html">
+          <i class="fa-solid fa-circle-user wd-nav-account-white" aria-hidden="true"></i>
+          Account
+        </a>
+      </li>
+      <li class="wd-active">
+        <a href="/Kanbas/Dashboard/screen.html">
+          <i class="fa fa-tachometer" aria-hidden="true"></i>
+          Dashboard
+        </a>
+      </li>
+      <li>
+        <a href="/Kanbas/Courses/Home/screen.html">
+          <i class="fa fa-book" aria-hidden="true"></i>
+          Courses
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          Calendar
+        </a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-inbox" aria-hidden="true"></i>Inbox</a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-clock" aria-hidden="true"></i>
+          History
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+          Studio
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+          Commons
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa fa-question-circle" aria-hidden="true"></i>
+          Help
+        </a>
+      </li>
+    </ul>
+  </div>
 
-      <div class="wd-dashboard-grid">
-        <div class="row">
+      <div class="wd-dashboard-grid flex-wrap">
+        <div class="row m-4">
           <h3>Dashboard</h3>
           <hr />
         </div>
@@ -68,16 +77,16 @@
           <hr />
         </div>
 
-        <div class="row row-cols-1 row-cols-md-3 g-4 wd-dashboard-grid">
-          <div class="col">
-            <div class="card h-100">
+        <div class="row row-col s-1 row-col s-md-3 g-4 m-4 mt-0">
+          <div class="col flex-grow-0 wd-dashboard-card-item">
+            <div class="card wd-dashboard-card">
               <img
-                src="/kanbas/img/bright-blue.png"
+                src="/Kanbas/img/bright-blue.png"
                 class="card-img-top"
                 alt="..."
               />
               <div class="card-body">
-                <a href="/kanbas/Courses/Home/screen.html">
+                <a href="/Kanbas/Courses/Home/screen.html">
                   <h5 class="card-title">CS5001 12631</h5>
                   <div class="card-text">2023 fall Full term</div>
                   <div>CS5001 12631 202410</div></a
@@ -85,15 +94,15 @@
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card h-100">
+          <div class="col flex-grow-0 wd-dashboard-card-item">
+            <div class="card wd-dashboard-card">
               <img
-                src="/kanbas/img/bright-blue.png"
+                src="/Kanbas/img/bright-blue.png"
                 class="card-img-top"
                 alt="..."
               />
               <div class="card-body">
-                <a href="/kanbas/Courses/Home/screen.html">
+                <a href="/Kanbas/Courses/Home/screen.html">
                   <h5 class="card-title">CS5002 12631</h5>
                   <div class="card-text">2023 fall Full term</div>
                   <div>CS5002 12631 202410</div></a
@@ -101,15 +110,15 @@
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card h-100">
+          <div class="col flex-grow-0 wd-dashboard-card-item">
+            <div class="card wd-dashboard-card">
               <img
-                src="/kanbas/img/bright-blue.png"
+                src="/Kanbas/img/bright-blue.png"
                 class="card-img-top"
                 alt="..."
               />
               <div class="card-body">
-                <a href="/kanbas/Courses/Home/screen.html">
+                <a href="/Kanbas/Courses/Home/screen.html">
                   <h5 class="card-title">CS5003 12631</h5>
                   <div class="card-text">2023 fall Full term</div>
                   <div>CS5003 12631 202410</div></a
@@ -117,15 +126,15 @@
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card h-100">
+          <div class="col flex-grow-0 wd-dashboard-card-item">
+            <div class="card wd-dashboard-card">
               <img
-                src="/kanbas/img/bright-blue.png"
+                src="/Kanbas/img/bright-blue.png"
                 class="card-img-top"
                 alt="..."
               />
               <div class="card-body">
-                <a href="/kanbas/Courses/Home/screen.html">
+                <a href="/Kanbas/Courses/Home/screen.html">
                   <h5 class="card-title">CS5004 12631</h5>
                   <div class="card-text">2023 fall Full term</div>
                   <div>CS5004 12631 202410</div></a
@@ -133,15 +142,15 @@
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card h-100">
+          <div class="col flex-grow-0 wd-dashboard-card-item">
+            <div class="card wd-dashboard-card">
               <img
-                src="/kanbas/img/bright-blue.png"
+                src="/Kanbas/img/bright-blue.png"
                 class="card-img-top"
                 alt="..."
               />
               <div class="card-body">
-                <a href="/kanbas/Courses/Home/screen.html">
+                <a href="/Kanbas/Courses/Home/screen.html">
                   <h5 class="card-title">CS5005 12631</h5>
                   <div class="card-text">2023 fall Full term</div>
                   <div>CS5005 12631 202410</div></a
@@ -149,15 +158,15 @@
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card h-100">
+          <div class="col flex-grow-0 wd-dashboard-card-item">
+            <div class="card wd-dashboard-card">
               <img
-                src="/kanbas/img/bright-blue.png"
+                src="/Kanbas/img/bright-blue.png"
                 class="card-img-top"
                 alt="..."
               />
               <div class="card-body">
-                <a href="/kanbas/Courses/Home/screen.html">
+                <a href="/Kanbas/Courses/Home/screen.html">
                   <h5 class="card-title">CS5006 12631</h5>
                   <div class="card-text">2023 fall Full term</div>
                   <div>CS5006 12631 202410</div></a
@@ -165,15 +174,15 @@
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card h-100">
+          <div class="col flex-grow-0 wd-dashboard-card-item">
+            <div class="card wd-dashboard-card">
               <img
-                src="/kanbas/img/bright-blue.png"
+                src="/Kanbas/img/bright-blue.png"
                 class="card-img-top"
                 alt="..."
               />
               <div class="card-body">
-                <a href="/kanbas/Courses/Home/screen.html">
+                <a href="/Kanbas/Courses/Home/screen.html">
                   <h5 class="card-title">CS5007 12631</h5>
                   <div class="card-text">2023 fall Full term</div>
                   <div>CS5007 12631 202410</div></a
@@ -181,6 +190,9 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="row row-col s-1 row-col s-md-3 g-4 m-4 mt-0">
+
         </div>
       </div>
     </div>
