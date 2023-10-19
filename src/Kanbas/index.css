@@ -252,6 +252,14 @@
 }
 
 /* cannot be 'wd-active' */
+.wd-kanbas-navigation .wd-icon {
+  font-size: 1.8em;
+  color: red;
+  /* font-size: larger; */
+  /* padding-left: 10px;
+  padding-right: 10px; */
+}
+
 .wd-kanbas-navigation li.wd-active {
   background-color: white;
 }
@@ -266,12 +274,20 @@
   text-decoration: none;
 }
 
-.wd-kanbas-navigation a i {
+.wd-kanbas-navigation a.active {
+  color: red;
+}
+
+.wd-kanbas-navigation-a-active {
+  color: red;
+}
+
+/* .wd-kanbas-navigation a i {
   color: red;
   font-size: large;
   padding-left: 10px;
   padding-right: 10px;
-}
+} */
 
 .wd-account-navigation {
   background-color: white;
@@ -413,8 +429,9 @@ wd-dashboard-grid {
 
 .wd-breadcrumb-icon {
   color: red;
-  margin-top: 12px;
+  margin-top: 5px;
   margin-right: 15px;
+  box-sizing: content-box;
 }
 
 .wd-breadcrumb a {
@@ -559,11 +576,11 @@ wd-dashboard-grid {
   margin-right: 20px;
 }
 
-.wd-course-right-bar hr{
+.wd-course-right-bar hr {
   margin: 5px;
 }
 
-.wd-course-right-bar h6{
+.wd-course-right-bar h6 {
   margin-top: 20px;
 }
 
@@ -577,13 +594,13 @@ wd-dashboard-grid {
 }
 
 .wd-course-home-top-bar {
-    background-color: black;
-    padding:20px;
-    margin-bottom: 10px;
+  background-color: black;
+  padding: 20px;
+  margin-bottom: 10px;
 }
 
-.wd-course-home-top-bar i{
-    color: red;
+.wd-course-home-top-bar i {
+  color: red;
 }
 
 .wd-kanbas-navigation-page {
@@ -593,7 +610,21 @@ wd-dashboard-grid {
 }
 
 .wd-kanbas-navigation-page a {
-text-decoration: none;
-  color:red;
+  text-decoration: none;
+  color: red;
   padding-right: 30px;
+}
+
+.wd-breadcrumb-style {
+  --bs-breadcrumb-divider: ">";
+}
+
+.wd-button-icon {
+  padding: 0.1rem;
+  font-size: larger;
+  /* font-weight: 100; */
+}
+
+.wd-margin-left-20 {
+  margin-left: 20px;
 }
