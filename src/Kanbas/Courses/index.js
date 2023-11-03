@@ -9,15 +9,15 @@ import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 import Breadcrumb from "./breadcrumb";
 
-function Courses() {
+function Courses({ courses }) {
   const { courseId } = useParams();
   const { pathname } = useLocation();
-  const [empty, kanbas, courses, id, screen] = pathname.split("/");
-  const course = db.courses.find((course) => course._id === courseId);
+  const [empty, kanbas, coursesStr, id, screen] = pathname.split("/");
+  const course = courses.find((course) => course._id === courseId);
   return (
     <>
       <div className=" d-none d-md-block">
-        < Breadcrumb/>
+        < Breadcrumb courses={courses}/>
       </div>
       
       <div>

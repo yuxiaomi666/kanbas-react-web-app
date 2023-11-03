@@ -628,3 +628,29 @@ wd-dashboard-grid {
 .wd-margin-left-20 {
   margin-left: 20px;
 }
+
+.dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.text-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

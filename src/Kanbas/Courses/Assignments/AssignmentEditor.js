@@ -4,18 +4,32 @@ import db from "../../Database";
 import { FaEllipsisVertical } from "react-icons/fa6";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import AssignmentSettings from "./AssignmentSettings";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addAssignment,
+  updateAssignment,
+  setAssignment,
+  reset
+} from "./assignmentsReducer";
 
 function AssignmentEditor() {
   const { assignmentId } = useParams();
-  const assignment = db.assignments.find(
-    (assignment) => assignment._id === assignmentId);
-
   const { courseId } = useParams();
   const navigate = useNavigate();
-  const handleSave = () => {
-    console.log("Actually saving assignment TBD in later assignments");
+
+  const assignments = useSelector((state) => state.assignmentsReducer.assignments);
+  const assignment = useSelector((state) => state.assignmentsReducer.assignment);
+  const dispatch = useDispatch();
+  const handleSave = (assignment) => {
+    const oldAssignment = assignments.find((a) => a._id === assignment._id);
+    oldAssignment ? dispatch(updateAssignment(assignment)) : dispatch(addAssignment(assignment));
+    dispatch(reset());
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
+  const handleCancel = () => {
+    dispatch(reset());
+  };
+
   return (
     <div className="wd-flex-grow-1">
       <div className="wd-grade-top-button-container">
@@ -30,12 +44,18 @@ function AssignmentEditor() {
       <div class="mb-3">
         <label for="name" className="form-label h6">Assignment Name</label>
         <input value={assignment.title}
-          className="form-control mb-2"  />
+          className="form-control mb-2"
+          onChange={(e) => dispatch(setAssignment({
+            ...assignment, title: e.target.value
+          }))}
+        />
       </div>
       <AssignmentSettings />
-      <div className="">
+      <div className="text-center">
         <Link to={`/Kanbas/Courses/${courseId}/Assignments`}
-          className="btn btn-danger">
+          className="btn btn-danger"
+          onClick={handleCancel}
+        >
           Cancel
         </Link>
         {/* <Link onClick={handleSave}
@@ -43,7 +63,7 @@ function AssignmentEditor() {
             className="btn btn-success me-2">
         Save
       </Link> */}
-        <button onClick={handleSave} className="btn btn-success me-2">
+        <button onClick={() => handleSave(assignment)} className="btn btn-success me-2">
           Save
         </button>
       </div>

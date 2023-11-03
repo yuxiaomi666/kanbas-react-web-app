@@ -1,13 +1,33 @@
-import React from "react";
+import React, {useState} from "react";
 import { useParams } from "react-router-dom";
 import db from "../../Database";
 import { FaEllipsisVertical } from "react-icons/fa6";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { AiOutlinePlus } from "react-icons/ai";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addModule,
+  deleteModule,
+  updateModule,
+  setModule,
+} from "./modulesReducer";
 
 function ModuleList() {
   const { courseId } = useParams();
-  const modules = db.modules;
+  // const modules = db.modules;
+  // const [modules, setModules] = useState(db.modules);
+  // const [module, setModule] = useState({
+  //   name: "New Module",
+  //   description: "New Description",
+  //   course: courseId,
+  // });
+  const modules = useSelector((state) => state.modulesReducer.modules);
+  const module = useSelector((state) => state.modulesReducer.module);
+  const dispatch = useDispatch();
+
+
+
+
   // modules
   // .filter((module) => module.course === courseId)
   // .map((module, index) => {
@@ -19,6 +39,35 @@ function ModuleList() {
   // })
   return (
     <ul className="list-group">
+      <li className="list-group-item">
+        <div className="d-flex">
+        <div className="form-group col-md-8">
+          <input className="form-control"
+          value={module.name}
+            onChange={(e) => dispatch(setModule({
+              ...module, name: e.target.value
+            }))}
+          />
+          <textarea className="form-control"
+          value={module.description}
+            onChange={(e) => dispatch(setModule({
+              ...module, description: e.target.value
+            }))}
+          />
+        </div>
+        <div>
+          <button className="btn btn-success"
+            onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+            Add
+          </button>
+          <button className="btn btn-primary"
+            onClick={() => dispatch(updateModule(module))}>
+            Update
+          </button>
+        </div>
+        </div>
+      </li>
+
       {
         modules
           .filter((module) => module.course === courseId)
@@ -28,6 +77,14 @@ function ModuleList() {
                 <FaEllipsisVertical className="me-1" />
                 {module.name}
                 <span className="float-end">
+                  <button className="btn btn-danger"
+                    onClick={() => dispatch(deleteModule(module._id))}>
+                    Delete
+                  </button>
+                  <button className="btn btn-success"
+                    onClick={() => dispatch(setModule(module))}>
+                    Edit
+                  </button>
                   <AiOutlineCheckCircle className="p-1 wd-fg-color-green" />
                   <AiOutlinePlus className="fa-solid p-1" />
                   <FaEllipsisVertical className="p-1" />
@@ -48,91 +105,3 @@ function ModuleList() {
   );
 }
 export default ModuleList;
-
-<div class="wd-clear-both mt-5">
-  <hr />
-  <ul class="list-group">
-    <li class="list-group-item list-group-item-secondary">
-      <i class="fa-solid fa-ellipsis-vertical me-1"></i>
-      Week 0 - INTRO
-      <span class="float-end">
-        <i class="fa-regular fa-circle-check p-1 wd-fg-color-green"></i>
-        <i class="fa-solid fa-plus p-1"></i>
-        <i class="fa-solid fa-ellipsis-vertical p-1"></i>
-      </span>
-
-    </li>
-    <li class="list-group-item h6">
-      <i class="fa-solid fa-ellipsis-vertical me-1"></i>
-      LEARNING OBJECTIVE
-    </li>
-    <li class="list-group-item">
-      <i class="fa-solid fa-ellipsis-vertical me-3"></i>
-      Introduction to the course
-    </li>
-    <li class="list-group-item">
-      <i class="fa-solid fa-ellipsis-vertical me-3"></i>
-      Learn what is web development
-    </li>
-    <li class="list-group-item h6">
-      <i class="fa-solid fa-ellipsis-vertical me-1"></i>
-      SLIDES
-    </li>
-    <li class="list-group-item">
-      <i class="fa-solid fa-ellipsis-vertical me-1"></i>
-      <i class="fa-solid fa-link me-2 wd-fg-color-green"></i>
-      <a href="#" class="text-decoration-none wd-fg-color-red">
-        Introduction to the course
-      </a>
-    </li>
-    <li class="list-group-item">
-      <i class="fa-solid fa-ellipsis-vertical me-1"></i>
-      <i class="fa-solid fa-link me-2 wd-fg-color-green"></i>
-      <a href="#" class="text-decoration-none wd-fg-color-red">
-        Learn what is web development
-      </a>
-    </li>
-  </ul>
-  <ul class="list-group">
-    <li class="list-group-item list-group-item-secondary">
-      <i class="fa-solid fa-ellipsis-vertical me-1"></i>
-      Week 1 - LEARN MORE
-      <span class="float-end">
-        <i class="fa-regular fa-circle-check p-1 wd-fg-color-green"></i>
-        <i class="fa-solid fa-plus p-1"></i>
-        <i class="fa-solid fa-ellipsis-vertical p-1"></i>
-      </span>
-
-    </li>
-    <li class="list-group-item h6">
-      <i class="fa-solid fa-ellipsis-vertical me-1"></i>
-      LEARNING GOALS
-    </li>
-    <li class="list-group-item">
-      <i class="fa-solid fa-ellipsis-vertical me-3"></i>
-      How to use react
-    </li>
-    <li class="list-group-item">
-      <i class="fa-solid fa-ellipsis-vertical me-3"></i>
-      What is nodejs
-    </li>
-    <li class="list-group-item h6">
-      <i class="fa-solid fa-ellipsis-vertical me-1"></i>
-      SLIDES
-    </li>
-    <li class="list-group-item">
-      <i class="fa-solid fa-ellipsis-vertical me-1"></i>
-      <i class="fa-solid fa-link me-2 wd-fg-color-green"></i>
-      <a href="#" class="text-decoration-none wd-fg-color-red">
-        React guidelines
-      </a>
-    </li>
-    <li class="list-group-item">
-      <i class="fa-solid fa-ellipsis-vertical me-1"></i>
-      <i class="fa-solid fa-link me-2 wd-fg-color-green"></i>
-      <a href="#" class="text-decoration-none wd-fg-color-red">
-        Redux tutorial
-      </a>
-    </li>
-  </ul>
-</div>

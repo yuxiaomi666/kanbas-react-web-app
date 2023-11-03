@@ -1,8 +1,31 @@
+import React from "react";
+import { useNavigate, useParams, Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import {
+    addAssignment,
+    deleteAssignment,
+    updateAssignment,
+    setAssignment,
+} from "./assignmentsReducer";
+
 function AssignmentSettings() {
+    const { assignmentId } = useParams();
+    const assignments = useSelector((state) => state.assignmentsReducer.assignments);
+    const dispatch = useDispatch();
+    const assignment = useSelector((state) => state.assignmentsReducer.assignment);
+
     return (
         <>
             <div className="mt-5 mb-5">
-                <textarea className="form-control" rows="3">This assignment describes how to install the ...</textarea>
+                <textarea
+                    className="form-control"
+                    rows="3"
+                    onChange={(e) => dispatch(setAssignment({
+                        ...assignment, discription: e.target.value
+                    }))}
+                >
+                    {assignment.discription}
+                </textarea>
             </div>
             <div className="container">
                 <div className="row justify-content-center">
@@ -10,7 +33,7 @@ function AssignmentSettings() {
                         <label className="float-end form-label">Points</label>
                     </div>
                     <div className="col-7">
-                        <input type="number" className="form-control" value="100"/>
+                        <input type="number" className="form-control" value="100" />
                     </div>
                 </div>
                 <div className="mt-3 row justify-content-center">
@@ -114,20 +137,39 @@ function AssignmentSettings() {
                                 <label className="form-check-label h5" for="due">
                                     Due
                                 </label>
-                                <input id="due" type="text" className="form-control" />
+                                <input id="due" type="date" className="form-control" value={assignment.dueDate}
+                                    onChange={(e) => dispatch(setAssignment({
+                                        ...assignment, dueDate: e.target.value
+                                    }))} />
                             </div>
                             <div className="mt-3 mb-3 row">
                                 <div className="col">
                                     <label className="form-check-label h5" for="from">
                                         Available from
                                     </label>
-                                    <input id="from" type="date" className="form-control" />
+                                    <input
+                                        id="from"
+                                        type="date"
+                                        className="form-control"
+                                        value={assignment.avaiableFrom}
+                                        onChange={(e) => dispatch(setAssignment({
+                                            ...assignment, avaiableFrom: e.target.value
+                                        }))}
+                                    />
                                 </div>
                                 <div className="col">
                                     <label className="form-check-label h5" for="assignTo">
                                         Until
                                     </label>
-                                    <input id="until" type="date" className="form-control" />
+                                    <input
+                                        id="until"
+                                        type="date"
+                                        className="form-control"
+                                        value={assignment.availableUntil}
+                                        onChange={(e) => dispatch(setAssignment({
+                                            ...assignment, availableUntil: e.target.value
+                                        }))}
+                                    />
                                 </div>
                             </div>
                             <button className="btn btn-light wd-bg-color-light-grey w-100" type="button" aria-expanded="false">
