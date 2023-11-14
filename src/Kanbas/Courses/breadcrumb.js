@@ -3,11 +3,10 @@ import { useParams, Routes, Route, Navigate, useLocation } from "react-router-do
 import db from "../Database";
 import { FaBars } from "react-icons/fa";
 
-function Breadcrumb( {courses}) {
+function Breadcrumb( {course} ) {
     const { courseId } = useParams();
     const { pathname } = useLocation();
     const [empty, kanbas, coursesStr, id, screen] = pathname.split("/");
-    const course = courses.find((course) => course._id === courseId);
     return (
         <div className="wd-breadcrumb">
             <FaBars className="wd-breadcrumb-icon"/>

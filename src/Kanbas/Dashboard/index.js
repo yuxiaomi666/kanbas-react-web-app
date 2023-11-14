@@ -5,7 +5,7 @@ import { useState } from "react";
 function Dashboard({ courses, course, setCourse, addNewCourse,
   deleteCourse, updateCourse }) {
   // const courses = db.courses;
-
+  console.log("Dashboard: " + courses);
 
   return (
     <div class="wd-dashboard-grid flex-wrap">
@@ -21,11 +21,11 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
         <input value={course.startDate} className="form-control" type="date" onChange={(e) => setCourse({ ...course, startDate: e.target.value })} />
         <input value={course.endDate} className="form-control" type="date" onChange={(e) => setCourse({ ...course, endDate: e.target.value })} />
         <button className="btn btn-success"
-        onClick={addNewCourse} >
+          onClick={addNewCourse} >
           Add
         </button>
         <button className="btn btn-primary"
-        onClick={updateCourse} >
+          onClick={() => updateCourse(course._id)} >
           Update
         </button>
 
@@ -48,7 +48,7 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
                 >
                   <h5 class="card-title">
                     {course.name}
-                    </h5>
+                  </h5>
                   <button className="btn btn-danger"
                     onClick={(event) => {
                       event.preventDefault();
@@ -66,7 +66,7 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
 
                   <div class="card-text">{course.number}</div>
                   <div>{course.startDate}</div>
-                  </Link>
+                </Link>
               </div>
             </div>
           </div>

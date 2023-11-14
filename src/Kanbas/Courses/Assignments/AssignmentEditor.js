@@ -11,23 +11,36 @@ import {
   setAssignment,
   reset
 } from "./assignmentsReducer";
+import * as client from "./client";
 
 function AssignmentEditor() {
   const { assignmentId } = useParams();
   const { courseId } = useParams();
   const navigate = useNavigate();
-
   const assignments = useSelector((state) => state.assignmentsReducer.assignments);
   const assignment = useSelector((state) => state.assignmentsReducer.assignment);
   const dispatch = useDispatch();
-  const handleSave = (assignment) => {
+
+  const handleSave = () => {
     const oldAssignment = assignments.find((a) => a._id === assignment._id);
-    oldAssignment ? dispatch(updateAssignment(assignment)) : dispatch(addAssignment(assignment));
+    oldAssignment ? handleUpdateAssignment() : handleAddAssignment();
     dispatch(reset());
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
   const handleCancel = () => {
     dispatch(reset());
+  };
+
+  const handleAddAssignment = () => {
+    client.createAssignment(courseId, assignment).then((assignment) =>
+      dispatch(addAssignment(assignment))
+    );
+  };
+
+  const handleUpdateAssignment = () => {
+    client.updateServerAssignment(assignment).then(() =>
+      dispatch(updateAssignment(assignment))
+    );
   };
 
   return (
@@ -58,12 +71,7 @@ function AssignmentEditor() {
         >
           Cancel
         </Link>
-        {/* <Link onClick={handleSave}
-            to={`/Kanbas/Courses/${courseId}/Assignments`}
-            className="btn btn-success me-2">
-        Save
-      </Link> */}
-        <button onClick={() => handleSave(assignment)} className="btn btn-success me-2">
+        <button onClick={() => handleSave()} className="btn btn-success me-2">
           Save
         </button>
       </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import db from "../../Database";
 import Header from "./Header";
@@ -12,22 +12,36 @@ import {
   deleteAssignment,
   updateAssignment,
   setAssignment,
+  setAssignments,
 } from "./assignmentsReducer";
 import SimpleDialog from "./SimpleDialog";
+import * as client from "./client";
 
 function Assignments() {
   const { courseId } = useParams();
   const [isOpen, setIsOpen] = useState(false);
   const assignments = useSelector((state) => state.assignmentsReducer.assignments);
   const assignment = useSelector((state) => state.assignmentsReducer.assignment);
-  const courseAssignments = assignments.filter(
-    (assignment) => assignment.course === courseId);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    client.findAssignmentsByCourseId(courseId).then((assignments) =>
+      dispatch(setAssignments(assignments))
+    );
+  }
+  , [courseId]);
+  
+  const handleDeleteAssignment = (assignmentId) => {
+    client.removeAssignment(assignmentId).then(() =>
+      dispatch(deleteAssignment(assignmentId))
+    );
+  };
+  
   const handleDeleteClick = () => {
     setIsOpen(true);
   };
   const handleYesClick = () => {
-    dispatch(deleteAssignment(assignment._id));
+    handleDeleteAssignment(assignment._id);
     setIsOpen(false);
   };
 
@@ -42,7 +56,7 @@ function Assignments() {
         <hr />
         <ul className="list-group">
           <ListHeader />
-          {courseAssignments.map((assignment) => (
+          {assignments.map((assignment) => (
             <li className="list-group-item">
               <Link
                 key={assignment._id}

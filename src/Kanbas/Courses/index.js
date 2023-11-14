@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useEffect, useState} from "react";
 import { useParams, Routes, Route, Navigate, useLocation } from "react-router-dom";
-import db from "../Database";
 import CourseNavigation from "./CourseNavigation";
 import Modules from "./Modules";
 import Home from "./Home";
@@ -8,16 +7,28 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 import Breadcrumb from "./breadcrumb";
+import axios from "axios";
 
-function Courses({ courses }) {
+function Courses() {
   const { courseId } = useParams();
   const { pathname } = useLocation();
   const [empty, kanbas, coursesStr, id, screen] = pathname.split("/");
-  const course = courses.find((course) => course._id === courseId);
+  const [course, setCourse] = useState({});
+
+  const findCourseById = async() => {
+    const response = await axios.get(`http://localhost:4000/api/courses/${courseId}`);
+    setCourse(response.data);
+  }
+
+  useEffect(() => {
+    findCourseById();
+  }
+  , []);
+  
   return (
     <>
       <div className=" d-none d-md-block">
-        < Breadcrumb courses={courses}/>
+        < Breadcrumb course={course}/>
       </div>
       
       <div>

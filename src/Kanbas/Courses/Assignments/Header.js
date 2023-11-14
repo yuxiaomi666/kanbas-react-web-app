@@ -10,6 +10,7 @@ import {
     setAssignment,
     reset
 } from "./assignmentsReducer";
+import * as client from "./client";
 
 function Header() {
     const assignments = useSelector((state) => state.assignmentsReducer.assignments);
@@ -17,6 +18,8 @@ function Header() {
     const dispatch = useDispatch();
     const { courseId } = useParams();
     const navigate = useNavigate();
+
+
     return (
         <>
             <div className="float-start">

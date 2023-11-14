@@ -6,11 +6,15 @@ import ConditionalOutput from "./ConditionalOutput";
 import TodoItem from "./todo/TodoItem";
 import TodoList from "./todo/TodoList";
 import { useSelector } from "react-redux";
+import "./test.css";
+import Har from "./exam16";
 
 function Assignment3() {
     const { todos } = useSelector((state) => state.todosReducer);
     return (
         <div>
+            <h1 title="rew" class="tre">I'm white on blue</h1>
+            <Har />
             <h2>Assignment 3</h2>
             <ul className="list-group">
                 {todos.map((todo) => (
