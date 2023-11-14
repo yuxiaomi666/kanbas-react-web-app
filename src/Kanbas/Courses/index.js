@@ -10,13 +10,14 @@ import Breadcrumb from "./breadcrumb";
 import axios from "axios";
 
 function Courses() {
+  const API_BASE = process.env.REACT_APP_API_BASE;
   const { courseId } = useParams();
   const { pathname } = useLocation();
   const [empty, kanbas, coursesStr, id, screen] = pathname.split("/");
   const [course, setCourse] = useState({});
 
   const findCourseById = async() => {
-    const response = await axios.get(`http://localhost:4000/api/courses/${courseId}`);
+    const response = await axios.get(`${API_BASE}/courses/${courseId}`);
     setCourse(response.data);
   }
 
