@@ -14,7 +14,8 @@ function WorkingWithArrays() {
     onChange={(e) => setTodo({ ...todo, id: e.target.value })}
   />;
 
-  const TODOS_API = "http://localhost:4000/a5/todos";
+  const A5_BASE = process.env.REACT_APP_LAB_BASE;
+  const TODOS_API = `${A5_BASE}/todos`;
 
   const fetchTodosPromise = () => {
     const promise = axios.get(TODOS_API);
@@ -24,7 +25,7 @@ function WorkingWithArrays() {
   };
 
   const createTodo = async () => {
-    const response = await axios.get("http://localhost:4000/a5/todos/create");
+    const response = await axios.get(`${A5_BASE}/todos/create`);
     setTodos(response.data);
   };
 
@@ -42,7 +43,7 @@ function WorkingWithArrays() {
   const updateTitleWithPut = async (id, title) => {
     try {
       const response = await axios.put(
-        "http://localhost:4000/a5/todos", 
+        `${A5_BASE}/todos`, 
         {id: id, title: title}
       );
       setTodos(response.data);
@@ -66,7 +67,7 @@ function WorkingWithArrays() {
 
   const postTodo = async () => {
     try {
-      const response = await axios.post("http://localhost:4000/a5/todos", {
+      const response = await axios.post(`${A5_BASE}/todos`, {
         title: title,
       });
       setTodos(response.data);
@@ -77,7 +78,7 @@ function WorkingWithArrays() {
   };
 
   const fetchTodos = async () => {
-    const response = await axios.get("http://localhost:4000/a5/todos");
+    const response = await axios.get(`${A5_BASE}/todos`);
     setTodos(response.data);
   };
 
@@ -114,7 +115,7 @@ function WorkingWithArrays() {
       <h1>Working with Arrays</h1>
 
       <h2>3.3.8.1 Fetch Items(Array)</h2>
-      <a href="http://localhost:4000/a5/todos" className="btn btn-primary">
+      <a href={`${A5_BASE}/todos`} className="btn btn-primary">
         Fetch Todos
       </a>
 
@@ -125,7 +126,7 @@ function WorkingWithArrays() {
         onChange={(e) => setId(e.target.value)}
       />
       <a
-        href={`http://localhost:4000/a5/todos/${id}`}
+        href={`${A5_BASE}/todos/${id}`}
         className="btn btn-primary"
       >
         Fetch Todo {id}
@@ -133,7 +134,7 @@ function WorkingWithArrays() {
       <br></br>
       <h2>3.3.8.3 Fetch completed items</h2>
       <a
-        href={`http://localhost:4000/a5/todos/completed`}
+        href={`${A5_BASE}/todos/completed`}
         className="btn btn-primary"
       >
         Fetch Completed Todo
@@ -141,7 +142,7 @@ function WorkingWithArrays() {
 
       <h2>3.3.8.3 Create new todo</h2>
       <a className="btn btn-primary"
-        href="http://localhost:4000/a5/todos/create">
+        href={`${A5_BASE}/todos/create`}>
         Create Todo "new todo"
       </a>
       <h2>3.3.8.4 Delete todo by Id</h2>

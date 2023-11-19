@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 function EncodingParametersInURLs() {
+  const A5_BASE = process.env.REACT_APP_LAB_BASE;
   const [a, setA] = useState(34);
   const [b, setB] = useState(23);
   const [assignment, setAssignment] = useState({
@@ -29,26 +30,26 @@ function EncodingParametersInURLs() {
       />
       <h3>Path Parameters</h3>
       <a
-        href={`http://localhost:4000/a5/add/${a}/${b}`}
+        href={`${A5_BASE}/add/${a}/${b}`}
         className="btn btn-primary"
       >
         Add {a} + {b}
       </a>
       <a
-        href={`http://localhost:4000/a5/subtract/${a}/${b}`}
+        href={`${A5_BASE}/subtract/${a}/${b}`}
         className="btn btn-danger"
       >
         Substract {a} - {b}
       </a>
       <h3>Query Parameters</h3>
       <a
-        href={`http://localhost:4000/a5/calculator?a=${a}&b=${b}&operation=add`}
+        href={`${A5_BASE}/calculator?a=${a}&b=${b}&operation=add`}
         className="btn btn-primary"
       >
         Add {a} + {b}
       </a>
       <a
-        href={`http://localhost:4000/a5/calculator?a=${a}&b=${b}&operation=subtract`}
+        href={`${A5_BASE}/calculator?a=${a}&b=${b}&operation=subtract`}
         className="btn btn-danger"
       >
         Substract {a} - {b}
@@ -56,13 +57,13 @@ function EncodingParametersInURLs() {
       <h2>3.2.4+3.2.5 exercise</h2>
       <h4>Assignment</h4>
       <a
-        href={`http://localhost:4000/a5/assignment`}
+        href={`${A5_BASE}/assignment`}
         className="btn btn-primary"
       >
         Get Assignment
       </a>
       <a
-        href={`http://localhost:4000/a5/assignment/title`}
+        href={`${A5_BASE}/assignment/title`}
         className="btn btn-primary"
       >
         Get Assignment Title
@@ -76,7 +77,7 @@ function EncodingParametersInURLs() {
         }
       />
       <a
-        href={`http://localhost:4000/a5/assignment/title/${assignment.title}`}
+        href={`${A5_BASE}/assignment/title/${assignment.title}`}
         className="btn btn-primary"
       >
         Update Assignment Title
@@ -90,7 +91,7 @@ function EncodingParametersInURLs() {
         }
       />
       <a
-        href={`http://localhost:4000/a5/assignment/score/${assignment.score}`}
+        href={`${A5_BASE}/assignment/score/${assignment.score}`}
         className="btn btn-primary"
       >
         Update Assignment Score
@@ -104,7 +105,7 @@ function EncodingParametersInURLs() {
         }
       />
       <a
-        href={`http://localhost:4000/a5/assignment/completed/${assignment.completed}`}
+        href={`${A5_BASE}/assignment/completed/${assignment.completed}`}
         className="btn btn-primary"
       >
         Update Assignment Complete Status
