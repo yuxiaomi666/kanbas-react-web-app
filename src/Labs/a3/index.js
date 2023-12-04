@@ -8,6 +8,7 @@ import TodoList from "./todo/TodoList";
 import { useSelector } from "react-redux";
 import "./test.css";
 import Har from "./exam16";
+import Q11 from "./exam1/q11";
 
 function Assignment3() {
     const { todos } = useSelector((state) => state.todosReducer);
@@ -30,6 +31,8 @@ function Assignment3() {
             <Classes />
             <PathParameters />
             <JavaScript />
+            <Q11 />
+            <Har />
         </div>);
 }
 export default Assignment3;

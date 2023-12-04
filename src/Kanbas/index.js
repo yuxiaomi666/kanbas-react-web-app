@@ -43,9 +43,6 @@ function Kanbas() {
 
     return (
         <Provider store={store}>
-            {/* <div>
-                <Nav />
-            </div> */}
             <div className="wd-flex-row-container">
                 <KanbasNavigation />
                 <div className="wd-flex-grow-1 wd-content-container ">
