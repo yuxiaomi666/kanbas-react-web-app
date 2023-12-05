@@ -1,10 +1,9 @@
 import Home from "./home";
-import Signup from "./signup";
 import Search from "./search";
 import Details from "./details";
 import { Routes, Route, Link } from "react-router-dom";
 import { useState } from "react";
-import UserList from "./users/list";
+import UserList from "./users/table";
 import UserDetails from "./users/details";
 import SignIn from "./users/signin";
 import Account from "./users/account";
@@ -12,6 +11,7 @@ import store from "./store";
 import { Provider } from "react-redux";
 import Navigation from "./nav";
 import CurrentUser from "./users/currentUser";
+import Signup from "./users/signup";
 
 function Project() {
   const [key, setKey] = useState("home");
@@ -35,7 +35,7 @@ function Project() {
                 <Route path="/search" element={<Search />} />
                 <Route path="/search/:search" element={<Search />} />
                 <Route path="/details/:albumId" element={<Details />} />
-                <Route path="/users" element={<UserList />} />
+                <Route path="/admin/users" element={<UserList />} />
                 <Route path="/users/:id" element={<UserDetails />} />
               </Routes>
             </div>

@@ -16,6 +16,13 @@ export const signout = async () => {
   return response.data;
 };
 
+export const signup = async (credentials) => {
+  const response = await axios.post(
+    `${USERS_API}/signup`, credentials);
+  return response.data;
+};
+
+
 export const account = async () => {
   const response = await request.post(`${USERS_API}/account`);
   return response.data;
@@ -31,8 +38,8 @@ export const findUserById = async (id) => {
   return response.data;
 };
 
-export const updateUser = async (id, user) => {
-  const response = await request.put(`${USERS_API}/${id}`, user);
+export const updateUser = async (user) => {
+  const response = await request.put(`${USERS_API}/${user._id}`, user);
   return response.data;
 };
 

@@ -9,10 +9,10 @@ function UserList() {
 
   const createUser = async () => {
     try {
-      const status = await client.createUser(user);
-      fetchUsers();
-    } catch (error) {
-      console.log(error);
+      const newUser = await client.createUser(user);
+      setUsers([newUser, ...users]);
+    } catch (err) {
+      console.log(err);
     }
   };
   const selectUser = async (user) => {
@@ -35,8 +35,7 @@ function UserList() {
   };
   const deleteUser = async (user) => {
     try {
-      console.log(user);
-      await client.deleteUser(user);
+      await client.deleteUser(user._id);
       setUsers(users.filter((u) => u._id !== user._id));
     } catch (err) {
       console.log(err);
